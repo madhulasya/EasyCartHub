@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EasyCartHub — Pure HTML & CSS Storefront</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #ffffff;
+      --card: #f9f9f9;
+      --muted: #555;
+      --text: #222;
+      --brand: #ff6600;
+      --brand-2: #ffaa00;
+      --radius: 12px;
+      --shadow: 0 6px 18px rgba(0,0,0,.1);
+      --section-space: clamp(2rem, 5vw, 4rem);
+      --maxw: 1200px;
+    }
+
+    body{
+      margin:0; font-family:Poppins, sans-serif; color:var(--text); background:var(--bg);
+    }
+
+    .container{width:100%; max-width:var(--maxw); margin:0 auto; padding:0 1rem}
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; border-radius: var(--radius);}
+
+    .btn{padding:.7rem 1rem; border-radius:var(--radius); background:var(--brand); color:white; font-weight:600; border:none; cursor:pointer}
+    .btn:hover{background:var(--brand-2)}
+    .btn.outline{background:transparent; border:1px solid var(--brand); color:var(--brand)}
+
+    header{position:sticky; top:0; background:#fff; box-shadow:var(--shadow); z-index:40}
+    .nav{display:flex; align-items:center; padding:.8rem 0; gap:1rem}
+    .brand{font-weight:800; color:var(--brand); font-size:1.2rem}
+    .nav-links{display:flex; gap:1rem; margin-left:2rem}
+    .nav-links a:hover{color:var(--brand)}
+    .spacer{flex:1}
+
+    .hero{padding:var(--section-space) 0; display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:center}
+    .hero h1{font-size:clamp(2rem,4vw,3rem)}
+    .hero p{color:var(--muted)}
+
+    .categories{display:grid; grid-template-columns:repeat(6,1fr); gap:1rem; margin:2rem 0}
+    .cat{text-align:center; padding:1rem; border-radius:var(--radius); background:var(--card); box-shadow:var(--shadow)}
+    .cat small{color:var(--muted)}
+
+    .products{display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin:2rem 0}
+    .card{background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; display:flex; flex-direction:column}
+    .card img{aspect-ratio: 4/3; object-fit:cover}
+    .card .body{padding:1rem}
+    .price{margin:.5rem 0; font-weight:600; color:var(--brand)}
+    .price s{color:var(--muted); font-weight:400; margin-left:.5rem}
+
+    footer{margin-top:var(--section-space); padding:2rem 0; text-align:center; color:var(--muted); background:#f2f2f2}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">EasyCartHub</div>
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+      </nav>
+      <div class="spacer"></div>
+      <button class="btn outline">Cart</button>
+    </div>
+  </header>
+
+  <section class="hero container">
+    <div>
+      <h1>Welcome to EasyCartHub</h1>
+      <p>Discover the latest in fashion, electronics, and home essentials — all in one place!</p>
+      <button class="btn">Shop Now</button>
+    </div>
+    <div>
+      <img src="product1.jpg" alt="Shopping Bags">
+    </div>
+  </section>
+
+  <section id="categories" class="container">
+    <h2>Popular Categories</h2>
+    <div class="categories">
+      <div class="cat">
+        <img src="product2.jpg" alt="Mobiles">
+        <div>Mobiles<br><small>Smartphones</small></div>
+      </div>
+      <div class="cat">
+        <img src="product8.jpg" alt="Laptops">
+        <div>Laptops<br><small>Work & Gaming</small></div>
+      </div>
+      <div class="cat">
+        <img src="product9.jpg" alt="Headphones">
+        <div>Headphones<br><small>Audio Gear</small></div>
+      </div>
+      <div class="cat">
+        <img src="product10.jpg" alt="Fashion">
+        <div>Fashion<br><small>Men & Women</small></div>
+      </div>
+      <div class="cat">
+        <img src="product4.jpg" alt="Home">
+        <div>Home<br><small>Kitchen</small></div>
+      </div>
+      <div class="cat">
+        <img src="product5.jpg" alt="Beauty">
+        <div>Beauty<br><small>Skincare</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="container">
+    <h2>Featured Products</h2>
+    <div class="products">
+      <div class="card">
+        <img src="product6.jpg"Headphones">
+        <div class="body">
+          <h3>Wireless Headphones</h3>
+          <p>Noise Cancelling, Over-ear</p>
+          <div class="price">₹1,999 <s>₹2,599</s></div>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="product7.jpg" alt="Smartwatch">
+        <div class="body">
+          <h3>Smartwatch Pro</h3>
+          <p>SpO₂, GPS, 7-day battery</p>
+          <div class="price">₹3,499 <s>₹4,299</s></div>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="product3.jpg" alt="Laptop">
+        <div class="body">
+          <h3>UltraSlim Laptop</h3>
+          <p>14" FHD, 8GB/512GB</p>
+          <div class="price">₹39,990 <s>₹44,990</s></div>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="product11.jpg" alt="Sneakers">
+        <div class="body">
+          <h3>Sneakers X</h3>
+          <p>Breathable daily wear</p>
+          <div class="price">₹1,499 <s>₹1,899</s></div>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="container">
+    <h2>About EasyCartHube</h2>
+    <p>Your one-stop destination for fashion, electronics, and lifestyle products. Built entirely with HTML & CSS to demonstrate clean responsive design without JavaScript.</p>
+  </section>
+
+  <footer>
+    <div class="container">© 2025 EasyCartHub • Built by Madhulasya with ❤ using only HTML & CSS</div>
+  </footer>
+</body>
+</html>
